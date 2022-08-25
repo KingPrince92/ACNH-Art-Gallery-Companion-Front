@@ -15,7 +15,6 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-        <Header />
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/gallery" element={<Gallery />} />
