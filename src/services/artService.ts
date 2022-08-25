@@ -14,7 +14,7 @@ export const getArtGallery = async (): Promise<SingleArt[]> => {
 
 export const getArtByName = async (name: string): Promise<SingleArt> => {
   return (
-    await axios.get(`${baseURL}${encodeURIComponent(name)}`, {
+    await axios.get(`${baseURL}/${encodeURIComponent(name)}`, {
       headers: { "X-API-KEY": key, "Accept-Version": `1.0.0` },
     })
   ).data;

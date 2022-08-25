@@ -1,0 +1,23 @@
+.Landing {
+  display: flex;
+  justify-content: center;
+}
+
+.Landing .flexbuttons {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  justify-content: center;
+}
+
+.Landing .landingbuttons {
+  text-decoration: none;
+  font-family: "Kanit", sans-serif;
+  margin: 10px 0px;
+  border-radius: 10px;
+}
+.Landing .landingbuttons:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
