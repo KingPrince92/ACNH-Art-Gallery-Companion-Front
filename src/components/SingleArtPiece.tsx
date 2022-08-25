@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import SingleArt from "../models/SingleArt";
 import "./SingleArtPiece.css";
 
@@ -9,7 +10,9 @@ const SingleArtPiece = ({ art }: Props) => {
   return (
     <li className="SingleArtPiece">
       <h2>{art.name}</h2>
-      <img src={art.image_url} alt={art.name} />
+      <Link to={`/${encodeURIComponent(art.name)}/details`}>
+        <img src={art.image_url} alt={art.name} />
+      </Link>
     </li>
   );
 };
