@@ -23,6 +23,7 @@ const CollectionContextProvider = ({ children }: Props) => {
   };
 
   const addCollection = (art: SingleArt): void => {
+    console.log(art);
     addToCollection(art).then(() => {
       getAndSetCollection(user!.uid);
     });

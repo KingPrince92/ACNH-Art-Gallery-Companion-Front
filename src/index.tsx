@@ -11,11 +11,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <CollectionContextProvider>
-      <AuthContextProvider>
+    <AuthContextProvider>
+      <CollectionContextProvider>
         <App />
-      </AuthContextProvider>
-    </CollectionContextProvider>
+      </CollectionContextProvider>
+    </AuthContextProvider>
   </React.StrictMode>
 );
 

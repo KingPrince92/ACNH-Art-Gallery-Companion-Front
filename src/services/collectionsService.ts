@@ -6,6 +6,7 @@ const baseURL: string = process.env.REACT_APP_API_URL || "";
 export const addToCollection = async (
   collection: SingleArt
 ): Promise<SingleArt> => {
+  console.log(collection);
   return (await axios.post(baseURL, collection)).data;
 };
 

@@ -13,8 +13,8 @@ interface Props {
 const SingleArtPiece = ({ art }: Props) => {
   const { addCollection } = useContext(CollectionContext);
   const { user } = useContext(AuthContext);
-  const addArtToCollection = (art: SingleArt, name: string) => {
-    art.name = name;
+  const addArtToCollection = (art: SingleArt, uid: string) => {
+    art.uid = uid;
     addCollection(art);
   };
   return (
