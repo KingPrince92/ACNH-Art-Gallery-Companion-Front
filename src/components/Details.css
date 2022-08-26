@@ -1,6 +1,29 @@
 .Details {
-  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.Details .art-image {
+  height: 200px;
+  width: auto;
+}
+
+.Details .info-container {
+  background-color: white;
+  width: 60%;
+  padding: 20px;
+  border-radius: 30px;
+  display: flexbox;
+}
+
+.Details .forgery {
+  float: right;
+  max-width: 75px;
+  border-radius: 20px;
+}
+.Details .forgery:hover {
+  float: right;
+  max-width: 75px;
+  opacity: 0.5;
+  background-color: yellow;
 }

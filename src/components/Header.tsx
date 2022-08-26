@@ -4,11 +4,13 @@ import "./Header.css";
 const Header = () => {
   return (
     <div className="Header">
-      <h1>
+      <h1 className="bgimage">
         <Link to="/" className="test">
-          YOOOOOOO
+          AY
         </Link>
       </h1>
+      <div className="pillar1"> </div>
+      <div className="pillar2"> </div>
     </div>
   );
 };

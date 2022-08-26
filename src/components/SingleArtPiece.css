@@ -1,0 +1,35 @@
+.SingleArtPiece {
+  border-radius: 30px;
+  background-color: white;
+  box-sizing: border-box;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.SingleArtPiece h2 {
+  text-align: center;
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+  .SingleArtPiece {
+    padding: 5px;
+  }
+  .SingleArtPiece h2 {
+    font-size: 10px;
+    padding: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .SingleArtPiece img {
+    max-width: 100%;
+    padding: 5px;
+  }
+}
