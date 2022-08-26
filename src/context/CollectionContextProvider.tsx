@@ -16,8 +16,8 @@ const CollectionContextProvider = ({ children }: Props) => {
   const { user } = useContext(AuthContext);
   const [collection, setCollection] = useState<SingleArt[]>([]);
 
-  const getAndSetCollection = (name: string): void => {
-    getArtByUID(name).then((response) => {
+  const getAndSetCollection = (uid: string): void => {
+    getArtByUID(uid).then((response) => {
       setCollection(response);
     });
   };
@@ -30,7 +30,7 @@ const CollectionContextProvider = ({ children }: Props) => {
 
   const removeCollection = (name: string, uid: string): void => {
     deleteFromCollection(name, uid).then(() => {
-      getArtByUID(name).then(() => {
+      getArtByUID(uid).then(() => {
         getAndSetCollection(uid);
       });
     });

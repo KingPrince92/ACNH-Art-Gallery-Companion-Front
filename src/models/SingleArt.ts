@@ -12,4 +12,5 @@ export default interface SingleArt {
   buy: number;
   sell: number;
   authenticity: string;
+  uid?: string;
 }
