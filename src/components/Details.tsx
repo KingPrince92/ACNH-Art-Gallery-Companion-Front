@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { classicNameResolver } from "typescript";
 import SingleArt from "../models/SingleArt";
 import { getArtByName } from "../services/artService";
 import "./Details.css";
-import Gallery from "./Gallery";
-import SingleArtPiece from "./SingleArtPiece";
 
 const Details = () => {
   const name: string | undefined = useParams().name;
-  console.log(name);
   const [art, setArt] = useState<SingleArt | null>(null);
+
+  const fakeButton = require("../assets/ForgeryButton.png");
 
   useEffect(() => {
     getArtByName(name!).then((response) => {
@@ -17,15 +18,75 @@ const Details = () => {
     });
   }, [name]);
 
+  const [shown, setShown] = useState(true);
+
+  const handleClick = (): void => {
+    {
+      shown ? setShown(false) : setShown(true);
+    }
+  };
+
   return (
     <div className="Details">
-      <button>Fake</button>
       <h2>{art?.name}</h2>
-      <img src={art?.image_url} alt={art?.name}></img>
-      <p>Original Name: {art?.art_name}</p>
-      <p>By: {art?.author}</p>
-      <p>Year: {art?.year}</p>
-      <p className="description">{art?.description}</p>
+      {shown ? (
+        <>
+          <img className="art-image" src={art?.image_url} alt={art?.name}></img>
+          <div className="info-container">
+            {art?.has_fake && (
+              <img
+                className="forgery"
+                src={fakeButton}
+                onClick={handleClick}
+                alt="Fake"
+              />
+            )}
+            <p>
+              <b>Original Name:</b> {art?.art_name}
+            </p>
+            <p>
+              <b>By:</b> {art?.author}
+            </p>
+            <p>
+              <b>Year: </b>
+              {art?.year}
+            </p>
+            <p className="description">{art?.description}</p>
+          </div>
+        </>
+      ) : (
+        <>
+          <img
+            className="art-image"
+            src={art?.fake_image_url}
+            alt={art?.name}
+          ></img>
+          <div className="info-container">
+            <img
+              className="forgery"
+              src={fakeButton}
+              onClick={handleClick}
+              alt="Fake"
+            />
+            <p>
+              <b>Original Name:</b> {art?.art_name}
+            </p>
+            <p>
+              <b>By:</b> {art?.author}
+            </p>
+            <p>
+              <b>Year: </b>
+              {art?.year}
+            </p>
+
+            {/* forgery description */}
+            <p className="description">{art?.authenticity}</p>
+          </div>
+        </>
+      )}
+      <Link to="/gallery" className="landingbuttons">
+        Back to Gallery
+      </Link>
     </div>
   );
 };

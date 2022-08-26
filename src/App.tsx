@@ -8,6 +8,7 @@ import "./App.css";
 import AboutUs from "./components/AboutUs";
 import Collection from "./components/Collection";
 import Details from "./components/Details";
+import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Header from "./components/Header";
 import Landing from "./components/Landing";
@@ -26,6 +27,7 @@ function App() {
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/aboutus" element={<AboutUs />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
