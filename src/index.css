@@ -6,7 +6,12 @@ p {
   margin: 0;
 }
 
+html,
 body {
+  height: 100vh;
+}
+
+body .App {
   background-image: linear-gradient(#90aff6, #5584f1, #0e3daa);
   background-repeat: no-repeat;
   font-family: "Kanit", sans-serif;
