@@ -15,12 +15,12 @@ export const getArtByUID = async (uid: string): Promise<SingleArt[]> => {
 };
 
 export const deleteFromCollection = async (
-  name: string,
+  _id: string,
   uid: string
 ): Promise<void> => {
   return (
     await axios.delete(
-      `${baseURL}/${encodeURIComponent(name)}/user/${encodeURIComponent(uid)}`
+      `${baseURL}/${encodeURIComponent(_id)}/user/${encodeURIComponent(uid)}`
     )
   ).data;
 };

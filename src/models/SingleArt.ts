@@ -1,4 +1,5 @@
 export default interface SingleArt {
+  _id?: string;
   name: string;
   url: string;
   image_url: string;

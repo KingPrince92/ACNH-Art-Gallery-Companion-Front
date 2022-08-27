@@ -23,21 +23,21 @@ const CollectionContextProvider = ({ children }: Props) => {
   };
 
   const addCollection = (art: SingleArt): void => {
-    console.log(art);
     addToCollection(art).then(() => {
       getAndSetCollection(user!.uid);
     });
   };
 
-  const removeCollection = (name: string, uid: string): void => {
-    deleteFromCollection(name, uid).then(() => {
+  const removeCollection = (_id: string, uid: string): void => {
+    console.log(_id);
+    deleteFromCollection(_id, uid).then(() => {
       getArtByUID(uid).then(() => {
         getAndSetCollection(uid);
       });
     });
   };
-  const isCollection = (name: string): boolean =>
-    collection.some((art) => art.name === name);
+  const isCollection = (_id: string): boolean =>
+    collection.some((art) => art._id === _id);
 
   useEffect(() => {
     if (user) {

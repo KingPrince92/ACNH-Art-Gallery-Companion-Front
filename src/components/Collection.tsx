@@ -5,7 +5,6 @@ import SingleArtPiece from "./SingleArtPiece";
 
 const Collection = () => {
   const { collection } = useContext(CollectionsContext);
-  console.log(collection);
   return (
     <div className="Collections">
       {collection.map((item) => (
