@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import CollectionContext from "../context/CollectionContext";
 import SingleArt from "../models/SingleArt";
-import { addToCollection } from "../services/collectionsService";
 import "./SingleArtPiece.css";
 
 interface Props {
@@ -11,12 +10,13 @@ interface Props {
 }
 
 const SingleArtPiece = ({ art }: Props) => {
-  const { addCollection } = useContext(CollectionContext);
+  const { addCollection, removeCollection } = useContext(CollectionContext);
   const { user } = useContext(AuthContext);
   const addArtToCollection = (art: SingleArt, uid: string) => {
     art.uid = uid;
     addCollection(art);
   };
+
   return (
     <li className="SingleArtPiece">
       <h2>{art.name}</h2>
@@ -26,7 +26,9 @@ const SingleArtPiece = ({ art }: Props) => {
       {user && (
         <div>
           <button onClick={() => addArtToCollection(art, user.uid)}>Add</button>
-          <button>Remove</button>
+          <button onClick={() => removeCollection(art._id!, user.uid)}>
+            Remove
+          </button>
         </div>
       )}
     </li>
