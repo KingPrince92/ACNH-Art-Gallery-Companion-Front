@@ -7,9 +7,11 @@ const Collection = () => {
   const { collection } = useContext(CollectionsContext);
   return (
     <div className="Collections">
-      {collection.map((item) => (
-        <SingleArtPiece art={item} />
-      ))}
+      <ul>
+        {collection.map((item) => (
+          <SingleArtPiece art={item} />
+        ))}
+      </ul>
     </div>
   );
 };
