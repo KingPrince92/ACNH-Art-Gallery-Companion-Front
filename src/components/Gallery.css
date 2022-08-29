@@ -31,4 +31,15 @@
   text-align: center;
   text-decoration: none;
   left: 40px;
+  color: rgba(0, 0, 0, 0.637);
+}
+
+.Gallery .searchandcoll {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Gallery .collection:hover {
+  background-color: rgba(255, 255, 255, 0.548);
 }
