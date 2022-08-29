@@ -29,7 +29,6 @@ const CollectionContextProvider = ({ children }: Props) => {
   };
 
   const removeCollection = (_id: string, uid: string): void => {
-    console.log(_id);
     deleteFromCollection(_id, uid).then(() => {
       getArtByUID(uid).then(() => {
         getAndSetCollection(uid);
