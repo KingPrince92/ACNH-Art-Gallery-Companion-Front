@@ -1,4 +1,5 @@
 import axios from "axios";
+import ArtResponse from "../models/ArtResponse";
 import SingleArt from "../models/SingleArt";
 
 const baseURL: string = "https://api.nookipedia.com/nh/art";
