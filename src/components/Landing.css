@@ -15,9 +15,13 @@
   font-family: "Kanit", sans-serif;
   margin: 10px 0px;
   border-radius: 10px;
+  background-color: tan;
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+  color: black;
 }
 .Landing .landingbuttons:hover {
   cursor: pointer;
-  color: white;
-  background-color: black;
+  background-color: rgb(226, 202, 171);
 }
