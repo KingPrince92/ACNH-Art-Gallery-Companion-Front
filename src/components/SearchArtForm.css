@@ -1,0 +1,25 @@
+.SearchArtForm input {
+  /* border-radius: 20px; */
+  width: 25vw;
+  height: 40px;
+  background-color: transparent;
+  color: rgb(212, 207, 207);
+  border: none;
+  font-family: "Hind", sans-serif;
+  font-size: large;
+  outline: none;
+}
+
+.SearchArtForm .classinput {
+  border-radius: 50px;
+  width: 35vw;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.35);
+  color: rgb(209, 209, 209);
+  border: none;
+  font-family: "Italiana", serif;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
