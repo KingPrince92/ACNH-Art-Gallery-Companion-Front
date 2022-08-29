@@ -19,11 +19,12 @@ const Gallery = () => {
   }, []);
   return (
     <div className="Gallery">
-      <Link to="/mycollection" className="collection">
-        See art pieces you've collected{" "}
-        <i className="fa-solid fa-palette art-icon" />
-      </Link>
-      <SearchArtForm />
+      <div className="searchandcoll">
+        <Link to="/mycollection" className="collection">
+          My Collection <i className="fa-solid fa-palette art-icon" />
+        </Link>
+        <SearchArtForm />
+      </div>
       <ul>
         {art
           .filter((item) =>
