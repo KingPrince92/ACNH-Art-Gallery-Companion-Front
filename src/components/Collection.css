@@ -2,9 +2,31 @@
   padding: 0;
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
   margin-right: 30px;
   margin-left: 30px;
   margin-bottom: 20px;
   justify-content: space-evenly;
+}
+
+.Collection .message {
+  background-color: rgba(255, 255, 255, 0.39);
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 10px;
+  margin: auto;
+  width: 450px;
+  text-align: center;
+}
+
+.Collection .landingbuttons {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.Collection .landingbuttons:hover {
+  text-decoration: none;
+  font-weight: 900;
+  color: hotpink;
 }

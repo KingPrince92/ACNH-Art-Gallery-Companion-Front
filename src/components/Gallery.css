@@ -1,5 +1,9 @@
+.Gallery {
+  margin-top: 15px;
+  box-sizing: border-box;
+}
 .Gallery ul {
-  padding: 0;
+  padding: 3px;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -8,4 +12,23 @@
   margin-left: 30px;
   margin-bottom: 20px;
   justify-content: space-evenly;
+  box-sizing: border-box;
+}
+.Gallery .SingleArtPiece {
+  border: 3px solid white;
+}
+
+.Gallery .SingleArtPiece:hover {
+  box-sizing: border-box;
+  border: 3px solid rgba(33, 175, 156, 0.87);
+}
+
+.Gallery .collection {
+  background-color: rgba(255, 255, 255, 0.39);
+  border-radius: 20px;
+  padding: 10px;
+  margin: 20px;
+  text-align: center;
+  text-decoration: none;
+  left: 40px;
 }
