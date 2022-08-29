@@ -22,10 +22,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/search" element={<Gallery />} />
           <Route path="/:name/details" element={<Details />} />
           <Route path="/mycollection" element={<Collection />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/aboutus" element={<AboutUs />} />
+          {/* <Route path="*" element={<Navigate to="/" />} /> */}
         </Routes>
         <Footer />
       </Router>
