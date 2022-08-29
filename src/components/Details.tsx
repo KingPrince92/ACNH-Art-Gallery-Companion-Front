@@ -19,11 +19,14 @@ const Details = () => {
   }, [name]);
 
   const [shown, setShown] = useState(true);
+  const [flipped, setFlipped] = useState(false);
 
   const handleClick = (): void => {
     {
       shown ? setShown(false) : setShown(true);
     }
+    setFlipped(true);
+    setTimeout(() => setFlipped(false), 500);
   };
 
   return (
@@ -31,7 +34,11 @@ const Details = () => {
       <h2>{art?.name}</h2>
       {shown ? (
         <>
-          <img className="art-image" src={art?.image_url} alt={art?.name}></img>
+          <img
+            className={`art-image${flipped ? " animation" : ""}`}
+            src={art?.image_url}
+            alt={art?.name}
+          ></img>
           <div className="info-container">
             {art?.has_fake && (
               <img
@@ -57,7 +64,7 @@ const Details = () => {
       ) : (
         <>
           <img
-            className="art-image"
+            className={`art-image${flipped ? " animation" : ""}`}
             src={art?.fake_image_url}
             alt={art?.name}
           ></img>
@@ -69,7 +76,8 @@ const Details = () => {
               alt="Fake"
             />
             <p>
-              <b>Original Name:</b> {art?.art_name}
+              <b>Original Name:</b> {art?.art_name}{" "}
+              <p className="forgery-text">Fake Version</p>
             </p>
             <p>
               <b>By:</b> {art?.author}

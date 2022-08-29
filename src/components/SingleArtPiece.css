@@ -17,6 +17,18 @@
   padding: 10px;
 }
 
+.SingleArtPiece button {
+  border: none;
+  padding: 5px;
+  margin: 2px;
+  border-radius: 20px;
+}
+
+.SingleArtPiece button:hover {
+  background-color: hotpink;
+  border-radius: 10px;
+}
+
 @media only screen and (max-width: 480px) {
   .SingleArtPiece {
     padding: 5px;
