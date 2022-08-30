@@ -38,5 +38,13 @@
 .Collection .landingbuttons:hover {
   text-decoration: none;
   font-weight: 900;
-  color: hotpink;
+  color: rgba(33, 175, 156, 0.87);
+}
+
+.Collection .SingleArtPiece {
+  border: 3px solid white;
+}
+.Collection .SingleArtPiece:hover {
+  box-sizing: border-box;
+  border: 3px solid rgba(33, 175, 156, 0.87);
 }
