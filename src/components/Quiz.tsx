@@ -100,7 +100,7 @@ const Quiz = () => {
       text: "Where is the famous original Familiar Statue located?",
       options: [
         { id: 0, text: "Greece", isCorrect: false },
-        { id: 1, text: "Franch", isCorrect: true },
+        { id: 1, text: "France", isCorrect: true },
         { id: 2, text: "Italy", isCorrect: true },
         { id: 3, text: "America", isCorrect: false },
       ],
@@ -201,7 +201,7 @@ const Quiz = () => {
 
   return (
     <div className="Quiz">
-      \{/* Header */}
+      {/* Header */}
       <h1>Art Quiz</h1>
       {/* Current Score */}
       <h2>Current Score: {score}</h2>
@@ -228,6 +228,7 @@ const Quiz = () => {
               {questions[currentQuestion].options.map((option) => {
                 return (
                   <li
+                    className="answers"
                     key={option.id}
                     onClick={() => answerClicked(option.isCorrect)}
                   >
