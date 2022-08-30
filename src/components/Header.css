@@ -24,7 +24,8 @@
 .Header .pillar1 {
   width: 100%;
   height: 20px;
-  background-color: #dbd4b7;
+
+  background-image: radial-gradient(#dbd4b7, #857c6b);
   padding: 10px;
   border-top: 2px inset #a6a286;
   border-bottom: 2px inset #a6a286;
@@ -32,7 +33,7 @@
 .Header .pillar2 {
   width: 100%;
   height: 20px;
-  background-color: #cec6ac;
+  background-image: radial-gradient(#cec6ac, #a6a286);
   border-bottom: 3px groove #a6a286;
   box-sizing: border-box;
 }

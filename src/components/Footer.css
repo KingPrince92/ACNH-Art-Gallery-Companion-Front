@@ -1,7 +1,7 @@
 .Footer {
-  background-color: #9b9988;
-  border-top: 3px inset tan;
-  border-bottom: 2px inset tan;
+  background-image: radial-gradient(#a6a286, #6d6454);
+  border-top: 3px inset rgb(153, 128, 96);
+  border-bottom: 2px inset rgb(78, 68, 54);
   padding: 20px;
   position: sticky;
   width: 100%;
