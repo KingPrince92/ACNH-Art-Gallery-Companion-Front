@@ -23,7 +23,7 @@ const Header = () => {
           </li>
         )}{" "}
       </div>
-      <div className="pillar2"> </div>
+      1<div className="pillar2"> </div>
     </div>
   );
 };

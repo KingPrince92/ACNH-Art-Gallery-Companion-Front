@@ -228,7 +228,6 @@ const Quiz = () => {
               {questions[currentQuestion].options.map((option) => {
                 return (
                   <li
-                    className="answers"
                     key={option.id}
                     onClick={() => answerClicked(option.isCorrect)}
                     className="noliststyle"
