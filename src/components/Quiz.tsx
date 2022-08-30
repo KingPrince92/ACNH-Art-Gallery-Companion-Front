@@ -201,10 +201,10 @@ const Quiz = () => {
 
   return (
     <div className="Quiz">
-      \{/* Header */}
+      {/* Header */}
       <h1>Art Quiz</h1>
       {/* Current Score */}
-      <h2>Current Score: {score}</h2>
+      {/* <h2>Current Score: {score}</h2> */}
       {showResults ? (
         /* 4. Final Results */
         <div className="results">
@@ -230,8 +230,9 @@ const Quiz = () => {
                   <li
                     key={option.id}
                     onClick={() => answerClicked(option.isCorrect)}
+                    className="noliststyle"
                   >
-                    {option.text}
+                    <button className="testing">{option.text}</button>
                   </li>
                 );
               })}
