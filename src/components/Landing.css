@@ -1,24 +1,37 @@
 .Landing {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Landing .Welcome {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  color: #afe2ad;
+  text-shadow: 5px 5px 10px #222921;
+}
+
+.Landing .Carousel {
+  width: 90%;
 }
 
 .Landing .flexbuttons {
   display: flex;
-  flex-direction: column;
-  width: 25%;
-  justify-content: center;
+  margin: 5px;
+  justify-content: space-between;
 }
 
 .Landing .landingbuttons {
+  display: flex;
+  justify-content: space-between;
   text-decoration: none;
   font-family: "Kanit", sans-serif;
-  margin: 10px 0px;
+  margin: 10px 10px;
   border-radius: 10px;
   background-color: tan;
   border: 1px solid black;
   text-align: center;
-  padding: 10px;
+  padding: 10px 15px 10px 15px;
   color: black;
 }
 .Landing .landingbuttons:hover {
