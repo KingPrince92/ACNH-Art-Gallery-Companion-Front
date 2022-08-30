@@ -204,7 +204,7 @@ const Quiz = () => {
       {/* Header */}
       <h1>Art Quiz</h1>
       {/* Current Score */}
-      <h2>Current Score: {score}</h2>
+      {/* <h2>Current Score: {score}</h2> */}
       {showResults ? (
         /* 4. Final Results */
         <div className="results">
@@ -228,11 +228,11 @@ const Quiz = () => {
               {questions[currentQuestion].options.map((option) => {
                 return (
                   <li
-                    className="answers"
                     key={option.id}
                     onClick={() => answerClicked(option.isCorrect)}
+                    className="noliststyle"
                   >
-                    {option.text}
+                    <button className="testing">{option.text}</button>
                   </li>
                 );
               })}
