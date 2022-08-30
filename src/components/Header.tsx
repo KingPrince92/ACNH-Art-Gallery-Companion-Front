@@ -13,17 +13,35 @@ const Header = () => {
         <h1 className="bgimage"></h1>
       </Link>
       <div className="pillar1">
+        <div className="dropdown">
+          <button className="dropbtn">
+            <i className="fa-solid fa-bars"></i>
+            <i className="fa-solid fa-caret-down"></i>
+          </button>
+          <div className="dropdown-content">
+            <a href="/">Home</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/mycollection">My Collection</a>
+            <a href="/quiz">Quiz</a>
+            <a href="#">Leaderboards</a>
+            <a href="/aboutus">About Us</a>
+          </div>
+        </div>
         {user ? (
-          <li>
-            <button onClick={signOut}>Sign Out</button>
+          <li className="removelist">
+            <button onClick={signOut} className="signinout">
+              Sign Out
+            </button>
           </li>
         ) : (
-          <li>
-            <button onClick={signInWithGoogle}>Sign In</button>
+          <li className="removelist">
+            <button onClick={signInWithGoogle} className="signinout">
+              Sign In
+            </button>
           </li>
         )}{" "}
       </div>
-      1<div className="pillar2"> </div>
+      <div className="pillar2"> </div>
     </div>
   );
 };
