@@ -1,0 +1,32 @@
+.AboutUs .Simon {
+  margin-left: 40px;
+}
+.AboutUs .Andrew {
+  margin-left: 40px;
+}
+.AboutUs .Milo {
+  margin-left: 40px;
+}
+
+.AboutUs .Simoninfo {
+  background-color: white;
+  opacity: 0.7;
+  width: 90%;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.AboutUs .Andrewinfo {
+  background-color: white;
+  opacity: 0.7;
+  width: 90%;
+  border-radius: 20px;
+  padding: 10px;
+}
+.AboutUs .Miloinfo {
+  background-color: white;
+  opacity: 0.7;
+  width: 90%;
+  border-radius: 20px;
+  padding: 10px;
+}
