@@ -15,6 +15,7 @@ const Leaderboard = () => {
       console.log(leaderboard);
     });
   };
+
   return <div className="Leaderboard">Leaderboard works</div>;
 };
 

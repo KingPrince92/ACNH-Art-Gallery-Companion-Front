@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Header from "./components/Header";
 import Landing from "./components/Landing";
+import Leaderboard from "./components/Leaderboard";
 import Quiz from "./components/Quiz";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/mycollection" element={<Collection />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
           {/* <Route path="*" element={<Navigate to="/" />} /> */}
         </Routes>
         <Footer />

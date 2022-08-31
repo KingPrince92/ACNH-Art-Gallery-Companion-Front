@@ -18,7 +18,6 @@ const Gallery11 = require("../assets/Gallery11.jpg");
 const Landing = () => {
   return (
     <div className="Landing">
-      <h1 className="Welcome">Welcome to the Museum</h1>
       <Carousel>
         <img src={museumEntrance} alt="Museum Entrance" />
         <img src={Gallery1} alt="Gallery1" />
