@@ -4,13 +4,6 @@
   flex-wrap: wrap;
 }
 
-.Landing .Welcome {
-  font-family: "Dancing Script", cursive;
-  font-weight: 700;
-  color: #afe2ad;
-  text-shadow: 5px 5px 10px #222921;
-}
-
 .Landing .Carousel {
   width: 90%;
 }

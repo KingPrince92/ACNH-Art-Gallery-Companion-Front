@@ -23,10 +23,11 @@ const Header = () => {
             <a href="/gallery">Gallery</a>
             <a href="/mycollection">My Collection</a>
             <a href="/quiz">Quiz</a>
-            <a href="#">Leaderboards</a>
+            <a href="/leaderboard">Leaderboards</a>
             <a href="/aboutus">About Us</a>
           </div>
         </div>
+        <h1 className="Welcome">Welcome to the Museum!</h1>
         {user ? (
           <li className="removelist">
             <button onClick={signOut} className="signinout">
