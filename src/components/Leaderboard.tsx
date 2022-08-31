@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import AuthContext from "../context/AuthContext";
 import QuizResponse from "../models/QuizResponse";
 import { getQuizScores } from "../services/quizService";
@@ -12,11 +12,13 @@ const Leaderboard = () => {
   const getAndSetScores = () => {
     getQuizScores().then((response) => {
       setLeaderboard(response);
-      console.log(leaderboard);
     });
   };
+  useEffect(() => {
+    getAndSetScores();
+  }, [leaderboard]);
 
-  return <div className="Leaderboard">Leaderboard works</div>;
+  return <div className="Leaderboard"></div>;
 };
 
 export default Leaderboard;
