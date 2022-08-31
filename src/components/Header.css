@@ -117,6 +117,12 @@
   display: block;
   text-align: left;
 }
+.Header .Welcome {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  color: #a2fa9fd2;
+  text-shadow: 5px 5px 10px #222921bb;
+}
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
