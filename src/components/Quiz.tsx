@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Quiz.css";
 
 const Quiz = () => {
-  const [showResults, setShowReults] = useState(false);
+  const [showResults, setShowResults] = useState(false);
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
@@ -189,14 +189,14 @@ const Quiz = () => {
     if (currentQuestion + 1 < questions.length) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
-      setShowReults(true);
+      setShowResults(true);
     }
   };
 
   const resetGame = () => {
     setScore(0);
     setCurrentQuestion(0);
-    setShowReults(false);
+    setShowResults(false);
   };
 
   return (
@@ -214,6 +214,7 @@ const Quiz = () => {
             {(score / questions.length) * 100}%)
           </h2>
           <button onClick={() => resetGame()}>Restart Game</button>
+          <button>View Leaderboard</button>
         </div>
       ) : (
         /* Question Card */
