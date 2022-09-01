@@ -1,9 +1,8 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import AuthContext from "../context/AuthContext";
 import CollectionsContext from "../context/CollectionContext";
 import "./Collection.css";
-import SingleArtPiece from "./SingleArtPiece";
+import CollectionArtPiece from "./CollectionArtPiece";
 
 const Collection = () => {
   const { collection } = useContext(CollectionsContext);
@@ -20,7 +19,7 @@ const Collection = () => {
       {collection.length >= 1 ? (
         <ul>
           {collection.map((item) => (
-            <SingleArtPiece art={item} />
+            <CollectionArtPiece art={item} key={item._id} />
           ))}
         </ul>
       ) : (

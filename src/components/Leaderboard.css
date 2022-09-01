@@ -1,4 +1,4 @@
-.Leaderboard .LeaderboardRanks {
+.Leaderboard {
   background-color: whitesmoke;
   padding: 20px;
   border-radius: 20px;
@@ -6,9 +6,13 @@
   width: 60%;
 }
 
+.Leaderboard .LeaderboardRanks {
+  width: 100%;
+}
+
 .Leaderboard .userPhoto {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   border-radius: 20px;
 }
 
