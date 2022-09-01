@@ -1,10 +1,18 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import AuthContext from "../context/AuthContext";
+import QuizResponse from "../models/QuizResponse";
+import { addQuizScore } from "../services/quizService";
 import "./Quiz.css";
 
 const Quiz = () => {
   const [showResults, setShowResults] = useState(false);
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const { user } = useContext(AuthContext);
+  const name: string = user?.displayName || "Anonymous";
+
+  const navigate = useNavigate();
 
   const questions = [
     {
@@ -199,6 +207,16 @@ const Quiz = () => {
     setShowResults(false);
   };
 
+  const addAndSeeLeaderboard = () => {
+    const newQuizScore: QuizResponse = {
+      photoURL: user!.photoURL!,
+      name,
+      score,
+    };
+    addQuizScore(newQuizScore);
+    navigate("/leaderboard");
+  };
+
   return (
     <div className="Quiz">
       {/* Header */}
@@ -214,7 +232,9 @@ const Quiz = () => {
             {(score / questions.length) * 100}%)
           </h2>
           <button onClick={() => resetGame()}>Restart Game</button>
-          <button>View Leaderboard</button>
+          <button onClick={addAndSeeLeaderboard}>
+            Add your score, and View Leaderboard
+          </button>
         </div>
       ) : (
         /* Question Card */

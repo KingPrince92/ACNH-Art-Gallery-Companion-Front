@@ -1,6 +1,6 @@
 export default interface QuizResponse {
-  photo: string;
   _id?: string;
+  photoURL: string;
   name: string;
-  score: string;
+  score: number;
 }

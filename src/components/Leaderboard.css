@@ -1,0 +1,32 @@
+.Leaderboard .LeaderboardRanks {
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 20px;
+  margin: auto;
+  width: 60%;
+}
+
+.Leaderboard .userPhoto {
+  height: 50px;
+  width: 50px;
+  border-radius: 20px;
+}
+
+.Leaderboard .scoreRow1 {
+  width: 10px;
+  padding: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  font-weight: 900;
+}
+.Leaderboard .scoreRow2 {
+  padding: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.Leaderboard .scoreRow3 {
+  padding: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
