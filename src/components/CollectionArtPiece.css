@@ -1,4 +1,4 @@
-.SingleArtPiece {
+.CollectionArtPiece {
   border-radius: 30px;
   background-color: white;
   box-sizing: border-box;
@@ -10,42 +10,38 @@
   margin: 10px;
 }
 
-.SingleArtPiece h2 {
+.CollectionArtPiece h2 {
   text-align: center;
   width: 100%;
   margin: 10px;
   padding: 10px;
 }
 
-.SingleArtPiece button {
+.CollectionArtPiece button {
   border: none;
   padding: 5px;
   margin: 2px;
   border-radius: 20px;
 }
 
-.SingleArtPiece button:hover {
+.CollectionArtPiece button:hover {
   background-color: hotpink;
   border-radius: 10px;
 }
 
 @media only screen and (max-width: 480px) {
-  .SingleArtPiece {
+  .CollectionArtPiece {
     padding: 5px;
   }
-  .SingleArtPiece h2 {
+  .CollectionArtPiece h2 {
     font-size: 10px;
     padding: 5px;
     overflow: hidden;
     white-space: nowrap;
   }
 
-  .SingleArtPiece img {
+  .CollectionArtPiece img {
     max-width: 100%;
     padding: 5px;
   }
-}
-
-.SingleArtPiece .disabled {
-  display: none;
 }

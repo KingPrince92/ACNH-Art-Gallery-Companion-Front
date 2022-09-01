@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { classicNameResolver } from "typescript";
 import SingleArt from "../models/SingleArt";
 import { getArtByName } from "../services/artService";
 import "./Details.css";
