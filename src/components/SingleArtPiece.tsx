@@ -10,7 +10,8 @@ interface Props {
 }
 
 const SingleArtPiece = ({ art }: Props) => {
-  const { addCollection } = useContext(CollectionContext);
+  const { addCollection, removeCollection, isCollection } =
+    useContext(CollectionContext);
   const { user } = useContext(AuthContext);
   const [confirmation, setConfirmation] = useState(false);
   const [shown, setShown] = useState(true);
@@ -35,23 +36,33 @@ const SingleArtPiece = ({ art }: Props) => {
       <Link to={`/${encodeURIComponent(art.name)}/details`}>
         <img src={art.image_url} alt={art.name} />
       </Link>
-      {user! && (
+      {isCollection(art._id!) ? (
+        <div>
+          <button
+            onClick={() => removeCollection(art._id!, user!.uid)}
+            className="fa-solid fa-square-minus"
+            title="Remove from Collection"
+          ></button>
+        </div>
+      ) : (
         <div>
           {" "}
           <button
-            onClick={() => addArtToCollection(art, user.uid)}
+            onClick={() => addArtToCollection(art, user!.uid)}
             className={`fa-solid fa-palette art-icon${
               disabled ? " disabled" : ""
             }`}
             title="Add to your Collection"
-          ></button>
+          >
+            {" "}
+          </button>
           {shown ? (
             " "
           ) : (
             <p className={`message${confirmation ? " show-message" : ""}`}>
               Added!
             </p>
-          )}
+          )}{" "}
         </div>
       )}
     </li>
