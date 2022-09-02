@@ -11,7 +11,6 @@ const Gallery = () => {
   const [art, setArt] = useState<SingleArt[]>([]);
   const [searchParams] = useSearchParams();
   const searchTerm = searchParams.get("query") || "";
-  console.log(searchTerm);
   useEffect(() => {
     getArtGallery().then((response) => {
       setArt(response);

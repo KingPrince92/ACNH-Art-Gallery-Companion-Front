@@ -28,8 +28,8 @@ const CollectionContextProvider = ({ children }: Props) => {
     });
   };
 
-  const removeCollection = (_id: string, uid: string): void => {
-    deleteFromCollection(_id, uid).then(() => {
+  const removeCollection = (name: string, uid: string): void => {
+    deleteFromCollection(name, uid).then(() => {
       getArtByUID(uid).then(() => {
         getAndSetCollection(uid);
       });
