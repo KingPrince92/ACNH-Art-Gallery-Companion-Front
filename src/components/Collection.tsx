@@ -19,7 +19,7 @@ const Collection = () => {
       {collection.length >= 1 ? (
         <ul>
           {collection.map((item) => (
-            <CollectionArtPiece art={item} key={item._id} />
+            <CollectionArtPiece art={item} key={item.name} />
           ))}
         </ul>
       ) : (

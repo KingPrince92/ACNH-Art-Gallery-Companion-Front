@@ -26,7 +26,7 @@ const CollectionArtPiece = ({ art }: Props) => {
       </Link>
       {user && (
         <div>
-          {isCollection(art._id!) ? (
+          {isCollection(art.name) ? (
             <button
               onClick={() => removeCollection(art._id!, user.uid)}
               className="fa-solid fa-square-minus"

@@ -31,7 +31,7 @@ const Gallery = () => {
             item.name.toLowerCase().includes(searchTerm.toLowerCase())
           )
           .map((item) => (
-            <SingleArtPiece art={item} />
+            <SingleArtPiece art={item} key={item.name} />
           ))}
       </ul>
     </div>
