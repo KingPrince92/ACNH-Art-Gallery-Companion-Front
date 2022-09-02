@@ -35,8 +35,8 @@ const CollectionContextProvider = ({ children }: Props) => {
       });
     });
   };
-  const isCollection = (_id: string): boolean =>
-    collection.some((art) => art._id === _id);
+  const isCollection = (name: string): boolean =>
+    collection.some((art) => art.name === name);
 
   useEffect(() => {
     if (user) {

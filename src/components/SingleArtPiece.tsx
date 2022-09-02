@@ -36,7 +36,7 @@ const SingleArtPiece = ({ art }: Props) => {
       <Link to={`/${encodeURIComponent(art.name)}/details`}>
         <img src={art.image_url} alt={art.name} />
       </Link>
-      {isCollection(art._id!) ? (
+      {isCollection(art.name) ? (
         <div>
           <button
             onClick={() => removeCollection(art._id!, user!.uid)}
