@@ -28,7 +28,7 @@ const CollectionArtPiece = ({ art }: Props) => {
         <div>
           {isCollection(art.name) ? (
             <button
-              onClick={() => removeCollection(art._id!, user.uid)}
+              onClick={() => removeCollection(art.name, user.uid)}
               className="fa-solid fa-square-minus"
               title="Remove from Collection"
             ></button>
