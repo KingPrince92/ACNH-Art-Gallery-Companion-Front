@@ -22,6 +22,9 @@ const Gallery = () => {
         <Link to="/mycollection" className="collection">
           My Collection <i className="fa-solid fa-palette art-icon" />
         </Link>
+        <Link to="/wishlist" className="collection">
+          My Wishlist <i className="fa-solid fa-bookmark" />
+        </Link>
         <SearchArtForm />
       </div>
       <ul>

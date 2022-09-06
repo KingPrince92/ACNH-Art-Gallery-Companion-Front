@@ -32,13 +32,6 @@ const CollectionContextProvider = ({ children }: Props) => {
   const isCollection = (name: string): boolean =>
     collection.some((art) => art.name === name);
 
-  useEffect(() => {
-    if (currentUserProfile) {
-      setCollection(currentUserProfile.collections);
-      updateUserProfiles();
-    }
-  }, [currentUserProfile]);
-
   return (
     <CollectionContext.Provider
       value={{ collection, addCollection, removeCollection, isCollection }}

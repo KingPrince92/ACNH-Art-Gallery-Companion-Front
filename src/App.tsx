@@ -14,6 +14,7 @@ import Header from "./components/Header";
 import Landing from "./components/Landing";
 import Leaderboard from "./components/Leaderboard";
 import Quiz from "./components/Quiz";
+import Wishlist from "./components/Wishlist";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/wishlist" element={<Wishlist />} />
           {/* <Route path="*" element={<Navigate to="/" />} /> */}
         </Routes>
         <Footer />

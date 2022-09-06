@@ -9,6 +9,10 @@
   align-items: center;
   margin: 10px;
 }
+.SingleArtPiece .collwish {
+  display: flex;
+  flex-direction: row;
+}
 
 .SingleArtPiece h2 {
   text-align: center;

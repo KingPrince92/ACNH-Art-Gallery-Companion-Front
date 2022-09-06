@@ -1,9 +1,5 @@
 import SingleArt from "./SingleArt";
 
-interface QuizScore {
-  score: number;
-}
-
 interface ArtPiece {
   name: string;
   url: string;
@@ -26,5 +22,5 @@ export default interface UserProfile {
   displayName: string;
   photoURL: string;
   collections: ArtPiece[];
-  quizScore: QuizScore[];
+  wishlist: ArtPiece[];
 }

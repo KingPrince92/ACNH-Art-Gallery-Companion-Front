@@ -37,7 +37,7 @@ function AuthContextProvider({ children }: { children: ReactNode }) {
           displayName: user.displayName!,
           photoURL: user.photoURL!,
           collections: [],
-          quizScore: [],
+          wishlist: [],
         };
         addUserProfile(newUser).then(() => setCurrentUserProfile(newUser));
       }
