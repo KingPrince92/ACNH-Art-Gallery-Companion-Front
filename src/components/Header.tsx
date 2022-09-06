@@ -1,5 +1,6 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+
 import AuthContext from "../context/AuthContext";
 import { signInWithGoogle, signOut } from "../firebaseConfig";
 import "./Header.css";
