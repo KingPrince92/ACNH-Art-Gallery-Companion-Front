@@ -40,6 +40,9 @@ const Landing = () => {
         <Link to="/mycollection" className="landingbuttons">
           My Collection
         </Link>
+        <Link to="/wishlist" className="landingbuttons">
+          My Wishlist
+        </Link>
         <Link to="/quiz" className="landingbuttons">
           Quiz
         </Link>

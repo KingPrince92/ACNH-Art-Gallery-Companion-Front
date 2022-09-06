@@ -34,3 +34,28 @@ export const removeFromUserCollection = async (
     })
   ).data;
 };
+
+export const removeFromUserWishlist = async (
+  uid: string,
+  artName: string
+): Promise<string> => {
+  return (
+    await axios.put(
+      `${baseURL}/guestbook/wishlist/remove/${encodeURIComponent(uid)}`,
+      {
+        name: artName,
+      }
+    )
+  ).data;
+};
+export const addToUserWishlist = async (
+  uid: string,
+  artPiece: SingleArt
+): Promise<SingleArt> => {
+  return (
+    await axios.put(
+      `${baseURL}/guestbook/wishlist/${encodeURIComponent(uid)}`,
+      artPiece
+    )
+  ).data;
+};

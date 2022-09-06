@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import AuthContextProvider from "./context/AuthContextProvider";
 import CollectionContextProvider from "./context/CollectionContextProvider";
+import WishlistContextProvider from "./context/WishlistContextProvider";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -12,9 +13,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <AuthContextProvider>
-      <CollectionContextProvider>
-        <App />
-      </CollectionContextProvider>
+      <WishlistContextProvider>
+        <CollectionContextProvider>
+          <App />
+        </CollectionContextProvider>
+      </WishlistContextProvider>
     </AuthContextProvider>
   </React.StrictMode>
 );
