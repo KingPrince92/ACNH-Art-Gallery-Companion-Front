@@ -15,17 +15,12 @@ const SingleArtPiece = ({ art }: Props) => {
   const { user } = useContext(AuthContext);
   const [confirmation, setConfirmation] = useState(false);
   const [shown, setShown] = useState(true);
-  const [disabled, setDisabled] = useState(false);
 
-  const addArtToCollection = (art: SingleArt, uid: string) => {
-    art.uid = uid;
+  const addArtToCollection = (art: SingleArt) => {
     addCollection(art);
     setConfirmation(true);
     {
       shown ? setShown(false) : setShown(true);
-    }
-    {
-      disabled ? setDisabled(false) : setDisabled(true);
     }
     setTimeout(() => setShown(true), 1000);
   };
@@ -39,7 +34,9 @@ const SingleArtPiece = ({ art }: Props) => {
       {isCollection(art.name) ? (
         <div>
           <button
-            onClick={() => removeCollection(art.name, user!.uid)}
+            onClick={() => {
+              removeCollection(user!.uid, art.name);
+            }}
             className="fa-solid fa-square-minus"
             title="Remove from Collection"
           ></button>
@@ -48,10 +45,8 @@ const SingleArtPiece = ({ art }: Props) => {
         <div>
           {" "}
           <button
-            onClick={() => addArtToCollection(art, user!.uid)}
-            className={`fa-solid fa-palette art-icon${
-              disabled ? " disabled" : ""
-            }`}
+            onClick={() => addArtToCollection(art)}
+            className="fa-solid fa-palette art-icon"
             title="Add to your Collection"
           >
             {" "}

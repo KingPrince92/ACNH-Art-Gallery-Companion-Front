@@ -4,7 +4,7 @@ import SingleArt from "../models/SingleArt";
 interface CollectionContextProvider {
   collection: SingleArt[];
   addCollection: (art: SingleArt) => void;
-  removeCollection: (name: string, uid: string) => void;
+  removeCollection: (uid: string, artName: string) => void;
   isCollection: (name: string) => boolean;
 }
 

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import CollectionsContext from "../context/CollectionContext";
 import "./Collection.css";
-import CollectionArtPiece from "./CollectionArtPiece";
+import SingleArtPiece from "./SingleArtPiece";
 
 const Collection = () => {
   const { collection } = useContext(CollectionsContext);
@@ -13,13 +13,18 @@ const Collection = () => {
         <img src={artLogo} alt="art plaque"></img>
         <p>
           Here is where you can see the art pieces you have collected. There are
-          43 pieces total. See if you can collect them all!{" "}
+          43 pieces total. See if you can collect them all!.{" "}
+        </p>
+        <p>
+          You have collected{" "}
+          <b className="collectionLength">{collection.length}</b> out of 43
+          pieces.
         </p>
       </div>
       {collection.length >= 1 ? (
         <ul>
           {collection.map((item) => (
-            <CollectionArtPiece art={item} key={item.name} />
+            <SingleArtPiece art={item} key={item.name} />
           ))}
         </ul>
       ) : (

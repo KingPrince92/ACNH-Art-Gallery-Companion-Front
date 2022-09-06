@@ -19,7 +19,9 @@
   width: 75%;
   margin-bottom: 10px;
 }
-
+.Collection .collectionLength {
+  color: red;
+}
 .Collection .message {
   background-color: rgba(255, 255, 255, 0.39);
   text-decoration: none;
