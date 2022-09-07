@@ -34,12 +34,12 @@ const Leaderboard = () => {
             <tr data-index={index} key={index}>
               <td className="scoreRow1">{index + 1}</td>
               <td className="scoreRow2">
-                {quizResult.name}{" "}
                 <img
                   className="userPhoto"
                   src={quizResult.photoURL}
                   alt="userphoto"
                 ></img>
+                {quizResult.name}{" "}
               </td>
               <td className="scoreRow3">
                 {((quizResult.score / 13) * 100).toFixed(2)}%

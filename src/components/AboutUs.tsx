@@ -7,49 +7,75 @@ const miloProfileimg = require("../assets/AcnhMilo.png");
 const AboutUs = () => {
   return (
     <div className="AboutUs">
-      <h1>Meet Us</h1>
+      <h1 className="meetus">Meet Us</h1>
 
       <div className="Simon">
-        <h3>Simon Orow</h3>
-        <img
-          className="simonimg"
-          src={simonProfileimg}
-          alt="Simon lookin all stronk"
-        />
+        <div className="fixsimon">
+          <h3>Simon Orow</h3>
+          <img
+            className="simonimg"
+            src={simonProfileimg}
+            alt="Simon lookin all stronk"
+          />
+        </div>
         <p className="Simoninfo">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea numquam
-          debitis molestiae, eaque, delectus, dolore magni sequi magnam et
-          praesentium id rem fugiat provident quisquam illo iure ad iusto
-          accusantium!
+          After working in the Financial Industry for roughly 4 and a half
+          years, I made the switch to attend the Grand Circus Bootcamp. I’ve
+          learned so much in the past 3 months, and I’ve loved every minute of
+          it. This project was a fantastic finish to the bootcamp because I
+          couldn’t have asked for a better group. I now feel like someone who
+          can better contribute to society. Thank you again, Mitch Cuckovich and
+          James Devine.
+          <span className="penguin">
+            Penguin Brothers Forever <i className="fa-solid fa-kiwi-bird"></i>
+          </span>
         </p>
       </div>
 
       <div className="Andrew">
-        <h3>Andrew Nadratowski</h3>
-        <img
-          className="andrewimg"
-          src={andrewProfileimg}
-          alt="Andrew be all fly an ish"
-        />
         <p className="Andrewinfo">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
-          voluptatibus est dicta ipsam beatae accusamus iusto officia quaerat
-          id, perferendis rerum recusandae, veritatis ab optio at sunt cumque
-          numquam repellendus?
+          After working in a kitchen for almost my entire professional career, I
+          started to realize something was missing. I didn’t enjoy the fact that
+          I walked into each day doing the same thing as the last, or making the
+          same food, with no new challenges or problems to face. When introduced
+          to Software Development by a family friend, and the work he creates, I
+          fell in love instantly. The constant problem solving and opportunity
+          to build something gave me the fulfillment I’ve been looking for. I am
+          looking to leverage the tech skills I’ve gained from my coding
+          bootcamp, in order to create intuitive and user friendly clean code.
+          <span className="penguin">
+            Penguin Brothers Forever <i className="fa-solid fa-kiwi-bird"></i>
+          </span>
         </p>
+        <div className="fixname">
+          <h3>Andrew Nadratowski</h3>
+          <img
+            className="andrewimg"
+            src={andrewProfileimg}
+            alt="Andrew be all fly an ish"
+          />
+        </div>
       </div>
       <div className="Milo">
-        <h3>Milo Prince</h3>
-        <img
-          className="miloimg"
-          src={miloProfileimg}
-          alt="Milo being loud af"
-        />
+        <div className="fixmilo">
+          <h3>Milo Prince</h3>
+          <img
+            className="miloimg"
+            src={miloProfileimg}
+            alt="Milo being loud af"
+          />
+        </div>
         <p className="Miloinfo">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-          dolorum maxime sit officia. Repudiandae cupiditate, maiores dolor
-          accusantium mollitia ab. Sint dolorem illum quibusdam laborum,
-          deserunt amet vitae perferendis numquam.
+          Former fry cook, barista, and government-endorsed underwriter. Current
+          paranormal enthusiast, coffee-fan, and web developer with a fully
+          curated art museum on his island. Had an excellent time during the
+          Grand Circus bootcamp learning how to code, and is very thankful that
+          Simon and Andrew agreed to spend the last two weeks of their class on
+          an Animal Crossing themed project even though they never really played
+          before.{" "}
+          <span className="penguin">
+            Penguin Brothers Forever <i className="fa-solid fa-kiwi-bird"></i>
+          </span>
         </p>
       </div>
     </div>
