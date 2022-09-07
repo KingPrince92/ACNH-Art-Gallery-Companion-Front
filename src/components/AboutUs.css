@@ -1,32 +1,72 @@
+.AboutUs .meetus {
+  text-align: center;
+  padding: 15px;
+}
+
 .AboutUs .Simon {
   margin-left: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .AboutUs .Andrew {
   margin-left: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.AboutUs .fixname {
+  display: flex;
+  flex-direction: column;
+}
+
+.AboutUs .fixsimon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.AboutUs .fixmilo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .AboutUs .Milo {
   margin-left: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .AboutUs .Simoninfo {
   background-color: white;
   opacity: 0.7;
-  width: 90%;
+  width: 50%;
   border-radius: 20px;
   padding: 10px;
+  height: 50%;
+  margin-right: 10%;
 }
 
 .AboutUs .Andrewinfo {
   background-color: white;
   opacity: 0.7;
-  width: 90%;
+  width: 50%;
   border-radius: 20px;
   padding: 10px;
+  height: 50%;
+  margin-left: 10%;
 }
 .AboutUs .Miloinfo {
   background-color: white;
   opacity: 0.7;
-  width: 90%;
+  width: 50%;
   border-radius: 20px;
   padding: 10px;
+  height: 50%;
+  margin-right: 10%;
+}
+
+.AboutUs .penguin {
+  color: red;
 }
