@@ -42,7 +42,7 @@ const Leaderboard = () => {
                 ></img>
               </td>
               <td className="scoreRow3">
-                {quizResult.score}/16 - {(quizResult.score / 16) * 100}%
+                {((quizResult.score / 13) * 100).toFixed(2)}%
               </td>
             </tr>
           ))}

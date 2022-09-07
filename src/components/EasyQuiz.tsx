@@ -152,7 +152,7 @@ const EasyQuiz = () => {
   return (
     <div className="EasyQuiz">
       {/* Header */}
-      <h1>Art Quiz</h1>
+      <h1>Easy Quiz</h1>
       {/* Current Score */}
       {/* <h2>Current Score: {score}</h2> */}
       {showResults ? (

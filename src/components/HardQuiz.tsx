@@ -55,19 +55,19 @@ const HardQuiz = () => {
       text: "Where is the famous original Familiar Statue located?",
       options: [
         { id: 0, text: "Greece", isCorrect: false },
-        { id: 1, text: "France", isCorrect: true },
+        { id: 1, text: "America", isCorrect: false },
         { id: 2, text: "Italy", isCorrect: false },
-        { id: 3, text: "America", isCorrect: false },
+        { id: 3, text: "France", isCorrect: true },
       ],
     },
 
     {
       text: "How long did Michelangelo take to sculpt the Gallant Statue?",
       options: [
-        { id: 0, text: "9 days", isCorrect: false },
-        { id: 1, text: "3 years", isCorrect: true },
+        { id: 0, text: "3 year", isCorrect: true },
+        { id: 1, text: "7 years", isCorrect: false },
         { id: 2, text: "15 weeks", isCorrect: false },
-        { id: 3, text: "7 years", isCorrect: false },
+        { id: 3, text: "9 days", isCorrect: false },
       ],
     },
 
@@ -91,13 +91,13 @@ const HardQuiz = () => {
         },
         {
           id: 1,
-          text: "Decipher ancient Egyptian hieroglyphs.",
-          isCorrect: true,
+          text: "Detailed 5 of the 10 commandments",
+          isCorrect: false,
         },
         {
           id: 2,
-          text: "Detailed 5 of the 10 commandments.",
-          isCorrect: false,
+          text: "Decipher ancient Egyptian hieroglyphs.",
+          isCorrect: true,
         },
         {
           id: 3,
@@ -197,7 +197,8 @@ const HardQuiz = () => {
   return (
     <div className="HardQuiz">
       {/* Header */}
-      <h1>Art Quiz</h1>
+      <h1>Advanced Quiz</h1>
+
       {/* Current Score */}
       {/* <h2>Current Score: {score}</h2> */}
       {showResults ? (
@@ -206,7 +207,7 @@ const HardQuiz = () => {
           <h1>Final Results</h1>
           <h2>
             {score} out of {questions.length} correct - (
-            {(score / questions.length) * 100}%)
+            {Math.floor((score / questions.length) * 100)}%)
           </h2>
           <button onClick={() => resetGame()}>Restart Game</button>
           <button onClick={addAndSeeLeaderboard}>
