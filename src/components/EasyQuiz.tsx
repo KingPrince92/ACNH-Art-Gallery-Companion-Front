@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import QuizResponse from "../models/QuizResponse";
 import { addQuizScore } from "../services/quizService";
-import "./Quiz.css";
+import "./EasyQuiz.css";
 
-const Quiz = () => {
+const EasyQuiz = () => {
   const [showResults, setShowResults] = useState(false);
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -23,7 +23,7 @@ const Quiz = () => {
 
   const questions = [
     {
-      text: "Who painted the Academic Painting?", //EASY, image needed
+      text: "Who painted the Academic Painting?",
       image: {},
       options: [
         { id: 0, text: "Pablo Picasso", isCorrect: false },
@@ -33,16 +33,7 @@ const Quiz = () => {
       ],
     },
     {
-      text: "What time of the day was Amazing Painting meant to be seen?", //advanced, image needed
-      options: [
-        { id: 0, text: "Late evening", isCorrect: false },
-        { id: 1, text: "Daytime", isCorrect: true },
-        { id: 2, text: "Midnight", isCorrect: false },
-        { id: 3, text: "Early morning", isCorrect: false },
-      ],
-    },
-    {
-      text: "Which art piece has an unknown author to this day?", //easy
+      text: "Which art piece has an unknown author to this day?",
       options: [
         { id: 0, text: "Basic Painting", isCorrect: false },
         { id: 1, text: "Familiar Statue", isCorrect: false },
@@ -51,7 +42,7 @@ const Quiz = () => {
       ],
     },
     {
-      text: "What is the actual name of the Basic Painting?", //easy
+      text: "What is the actual name of the Basic Painting?",
       options: [
         { id: 0, text: "The Blue Boy", isCorrect: true },
         { id: 1, text: "Jonathan Buttall", isCorrect: false },
@@ -61,7 +52,7 @@ const Quiz = () => {
     },
 
     {
-      text: "How can you tell if the Beautiful Statue is a forgery?", //easy
+      text: "How can you tell if the Beautiful Statue is a forgery?",
       options: [
         { id: 0, text: "There are no forgeries.", isCorrect: false },
         {
@@ -78,32 +69,14 @@ const Quiz = () => {
       ],
     },
     {
-      text: "The Calm Painting does not have a forgery.", //easy
+      text: "The Calm Painting does not have a forgery.",
       options: [
         { id: 0, text: "False", isCorrect: false },
         { id: 1, text: "True", isCorrect: true },
       ],
     },
     {
-      text: "The Common Painting was known for depicting the lives of whom?", //advanced, look at other groups instead of Farmersonly.com
-      options: [
-        { id: 0, text: "Farmers", isCorrect: false },
-        { id: 1, text: "Women", isCorrect: false },
-        { id: 2, text: "Commoners", isCorrect: true },
-        { id: 3, text: "Men", isCorrect: false },
-      ],
-    },
-    {
-      text: "Who painted the Detailed Painting?", //advanced, image
-      options: [
-        { id: 0, text: "Hokusai", isCorrect: false },
-        { id: 1, text: "Utamaro", isCorrect: false },
-        { id: 2, text: "Yasumasa Morimura", isCorrect: false },
-        { id: 3, text: "Ito Jakuchu", isCorrect: true },
-      ],
-    },
-    {
-      text: "What year was the Dynamic Painting painted?", //easy, image
+      text: "What year was the Dynamic Painting painted?",
       options: [
         { id: 0, text: "130 BCE", isCorrect: false },
         { id: 1, text: "1843", isCorrect: false },
@@ -113,16 +86,7 @@ const Quiz = () => {
     },
 
     {
-      text: "Where is the famous original Familiar Statue located?", //advanced, image
-      options: [
-        { id: 0, text: "Greece", isCorrect: false },
-        { id: 1, text: "France", isCorrect: true },
-        { id: 2, text: "Italy", isCorrect: false },
-        { id: 3, text: "America", isCorrect: false },
-      ],
-    },
-    {
-      text: "The Famous Painting is known as:", //easy, change answers
+      text: "The Famous Painting is known as:",
       options: [
         { id: 0, text: "Mona Lisa", isCorrect: true },
         { id: 1, text: "Lona Misa", isCorrect: false },
@@ -131,7 +95,7 @@ const Quiz = () => {
       ],
     },
     {
-      text: "How can you tell if the Flowery Painting is a forgery?", //easy
+      text: "How can you tell if the Flowery Painting is a forgery?",
       options: [
         {
           id: 0,
@@ -148,16 +112,7 @@ const Quiz = () => {
       ],
     },
     {
-      text: "How long did Michelangelo take to sculpt the Gallant Statue?", //advanced
-      options: [
-        { id: 0, text: "9 days", isCorrect: false },
-        { id: 1, text: "3 years", isCorrect: true },
-        { id: 2, text: "15 weeks", isCorrect: false },
-        { id: 3, text: "7 years", isCorrect: false },
-      ],
-    },
-    {
-      text: "Twinkling Painting is famously known as what?", //easy, change options
+      text: "Twinkling Painting is famously known as what?",
       options: [
         { id: 0, text: "The Stars of the Night", isCorrect: false },
         { id: 1, text: "The Starry Night", isCorrect: true },
@@ -166,34 +121,12 @@ const Quiz = () => {
       ],
     },
     {
-      text: "Who is the woman in the Worthy Painting mistaken for?", //advanced, make it harder
+      text: "What was the name of the painter that painted the Jolly Painting?",
       options: [
-        { id: 0, text: "Queen Elizabeth", isCorrect: false },
-        { id: 1, text: "Joan of Arc", isCorrect: true },
-        { id: 2, text: "Frida Kahlo", isCorrect: false },
-        { id: 3, text: "Élisabeth Vigée Le Brun", isCorrect: false },
-      ],
-    },
-
-    {
-      text: "What did the Informative Statue help with?", //advanced, change answers
-      options: [
-        {
-          id: 0,
-          text: "Gave directions across Scotland.",
-          isCorrect: false,
-        },
-        {
-          id: 1,
-          text: "Decipher ancient Egyptian hieroglyphs.",
-          isCorrect: true,
-        },
-        {
-          id: 2,
-          text: "Detailed 5 of the 10 commandments.",
-          isCorrect: false,
-        },
-        { id: 3, text: "Blueprint to build the trojan horse.", isCorrect: false },
+        { id: 0, text: "Leonardo Da Vinci", isCorrect: false },
+        { id: 1, text: "Guiseppe Arcimboldo", isCorrect: true },
+        { id: 2, text: "Unknown", isCorrect: false },
+        { id: 3, text: "Arnold Böcklin", isCorrect: false },
       ],
     },
   ];
@@ -215,18 +148,9 @@ const Quiz = () => {
     setShowResults(false);
   };
 
-  const addAndSeeLeaderboard = () => {
-    const newQuizScore: QuizResponse = {
-      photoURL: user!.photoURL!,
-      name,
-      score,
-    };
-    addQuizScore(newQuizScore);
-    navigate("/leaderboard");
-  };
 
   return (
-    <div className="Quiz">
+    <div className="EasyQuiz">
       {/* Header */}
       <h1>Art Quiz</h1>
       {/* Current Score */}
@@ -240,9 +164,6 @@ const Quiz = () => {
             {(score / questions.length) * 100}%)
           </h2>
           <button onClick={() => resetGame()}>Restart Game</button>
-          <button onClick={addAndSeeLeaderboard}>
-            Add your score, and View Leaderboard
-          </button>
         </div>
       ) : (
         /* Question Card */
@@ -273,4 +194,4 @@ const Quiz = () => {
   );
 };
 
-export default Quiz;
+export default EasyQuiz;
