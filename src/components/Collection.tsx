@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import CollectionsContext from "../context/CollectionContext";
+import AuthContext from "../context/AuthContext";
 import "./Collection.css";
 import SingleArtPiece from "./SingleArtPiece";
 
 const Collection = () => {
-  const { collection } = useContext(CollectionsContext);
+  const { collection } = useContext(AuthContext);
   const artLogo = require("../assets/Art_Plaque_NH_Icon.png");
   console.log(collection);
   return (
