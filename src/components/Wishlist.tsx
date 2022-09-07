@@ -2,12 +2,22 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import WishlistContext from "../context/WishlistContext";
 import SingleArtPiece from "./SingleArtPiece";
+import "./Wishlist.css";
 
 const Wishlist = () => {
   const { wishlist } = useContext(WishlistContext);
+  const wishlistLogo = require("../assets/PresentNH.png");
   return (
     <div className="Wishlist">
-      <div className="info"></div>
+      <div className="info">
+        <img src={wishlistLogo} className="present" alt="present"></img>
+        <p className="infotext">
+          Here is where you can see art pieces you have added to your wishlist!
+          These may be pieces needed to finish your collection, or pieces you'd
+          like to have for fun.
+        </p>
+      </div>
+
       {wishlist.length >= 1 ? (
         <ul>
           {wishlist.map((item) => (

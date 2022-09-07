@@ -12,32 +12,28 @@ interface Props {
 }
 
 const WishlistContextProvider = ({ children }: Props) => {
-  const { user, currentUserProfile, updateUserProfiles } =
-    useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const [wishlist, setWishlist] = useState<SingleArt[]>([]);
 
   const addWishlist = (art: SingleArt): void => {
     addToUserWishlist(user!.uid, art).then(() => {
-      setWishlist(currentUserProfile!.wishlist);
-      updateUserProfiles();
+      setWishlist(user!.wishlist);
     });
   };
 
   const removeWishlist = (uid: string, artName: string): void => {
     removeFromUserWishlist(uid, artName).then(() => {
-      setWishlist(currentUserProfile!.wishlist);
-      updateUserProfiles();
+      setWishlist(user!.wishlist);
     });
   };
   const isWishlist = (name: string): boolean =>
     wishlist.some((art) => art.name === name);
 
   useEffect(() => {
-    if (currentUserProfile) {
-      setWishlist(currentUserProfile.wishlist);
-      updateUserProfiles();
+    if (user) {
+      setWishlist(user.wishlist);
     }
-  }, [currentUserProfile]);
+  }, [user]);
 
   return (
     <WishlistContext.Provider

@@ -4,6 +4,15 @@ import UserProfile from "../models/userResponse";
 
 const baseURL: string = process.env.REACT_APP_API_URL || "";
 
+export const getUser = async (uid: string): Promise<UserProfile> => {
+  return (await axios.get(`${baseURL}/guestbook/${encodeURIComponent(uid)}`))
+    .data;
+};
+export const getMultiUsers = async (uid: string): Promise<UserProfile[]> => {
+  return (await axios.get(`${baseURL}/guestbook/${encodeURIComponent(uid)}`))
+    .data;
+};
+
 //User is added with every log in
 export const addUserProfile = async (
   userProfile: UserProfile
@@ -11,16 +20,15 @@ export const addUserProfile = async (
   return (await axios.post(`${baseURL}/guestbook`, userProfile)).data;
 };
 
-export const getUsers = async (): Promise<UserProfile[]> => {
-  return (await axios.get(`${baseURL}/guestbook`)).data;
-};
-
 export const addToUserCollection = async (
   uid: string,
   artPiece: SingleArt
 ): Promise<SingleArt> => {
   return (
-    await axios.put(`${baseURL}/guestbook/${encodeURIComponent(uid)}`, artPiece)
+    await axios.put(
+      `${baseURL}/guestbook/collect/${encodeURIComponent(uid)}`,
+      artPiece
+    )
   ).data;
 };
 
@@ -29,9 +37,12 @@ export const removeFromUserCollection = async (
   artName: string
 ): Promise<string> => {
   return (
-    await axios.put(`${baseURL}/guestbook/remove/${encodeURIComponent(uid)}`, {
-      name: artName,
-    })
+    await axios.put(
+      `${baseURL}/guestbook/collect/remove/${encodeURIComponent(uid)}`,
+      {
+        name: artName,
+      }
+    )
   ).data;
 };
 

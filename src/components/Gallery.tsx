@@ -27,6 +27,29 @@ const Gallery = () => {
         </Link>
         <SearchArtForm />
       </div>
+      <div className="galleryInfo">
+        <h3>Welcome to the Gallery!</h3>
+        <p>
+          Below, you can see all of the art pieces available to donate to your
+          museum.{" "}
+        </p>
+        <p>
+          Once you've collected a piece, add it to your Collection with the{" "}
+          <i
+            className="fa-solid fa-palette art-icon"
+            title="Add to your Collection"
+          ></i>{" "}
+          button.
+        </p>
+        <p>
+          You're able to add pieces you're looking for with the{" "}
+          <i
+            className="fa-regular fa-bookmark"
+            title="Add to your Wishlist"
+          ></i>{" "}
+          button.
+        </p>
+      </div>
       <ul>
         {art
           .filter((item) =>

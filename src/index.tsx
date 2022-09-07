@@ -13,11 +13,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <AuthContextProvider>
-      <WishlistContextProvider>
-        <CollectionContextProvider>
+      <CollectionContextProvider>
+        <WishlistContextProvider>
           <App />
-        </CollectionContextProvider>
-      </WishlistContextProvider>
+        </WishlistContextProvider>
+      </CollectionContextProvider>
     </AuthContextProvider>
   </React.StrictMode>
 );

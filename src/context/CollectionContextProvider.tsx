@@ -12,25 +12,29 @@ interface Props {
 }
 
 const CollectionContextProvider = ({ children }: Props) => {
-  const { user, currentUserProfile, updateUserProfiles } =
-    useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const [collection, setCollection] = useState<SingleArt[]>([]);
 
   const addCollection = (art: SingleArt): void => {
     addToUserCollection(user!.uid, art).then(() => {
-      setCollection(currentUserProfile!.collections);
-      updateUserProfiles();
+      setCollection(user!.collections);
     });
   };
 
   const removeCollection = (uid: string, artName: string): void => {
     removeFromUserCollection(uid, artName).then(() => {
-      setCollection(currentUserProfile!.collections);
-      updateUserProfiles();
+      setCollection(user!.collections);
     });
   };
+
   const isCollection = (name: string): boolean =>
     collection.some((art) => art.name === name);
+
+  useEffect(() => {
+    if (user) {
+      setCollection(user.collections);
+    }
+  }, [user]);
 
   return (
     <CollectionContext.Provider

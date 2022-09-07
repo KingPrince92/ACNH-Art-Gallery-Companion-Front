@@ -2,6 +2,10 @@
   margin-top: 15px;
   box-sizing: border-box;
 }
+.Gallery h3 {
+  margin: 5px;
+}
+
 .Gallery ul {
   padding: 3px;
   list-style: none;
@@ -16,6 +20,16 @@
 }
 .Gallery .SingleArtPiece {
   border: 3px solid white;
+}
+
+.Gallery .galleryInfo {
+  background-color: white;
+  text-align: center;
+  width: 75%;
+  border-radius: 20px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Gallery .SingleArtPiece:hover {

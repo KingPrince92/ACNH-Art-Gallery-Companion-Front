@@ -7,6 +7,7 @@ import SingleArtPiece from "./SingleArtPiece";
 const Collection = () => {
   const { collection } = useContext(CollectionsContext);
   const artLogo = require("../assets/Art_Plaque_NH_Icon.png");
+  console.log(collection);
   return (
     <div className="Collection">
       <div className="info">
