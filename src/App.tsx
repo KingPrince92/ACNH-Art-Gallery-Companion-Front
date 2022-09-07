@@ -8,8 +8,10 @@ import "./App.css";
 import AboutUs from "./components/AboutUs";
 import Collection from "./components/Collection";
 import Details from "./components/Details";
+import EasyQuiz from "./components/EasyQuiz";
 import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
+import HardQuiz from "./components/HardQuiz";
 import Header from "./components/Header";
 import Landing from "./components/Landing";
 import Leaderboard from "./components/Leaderboard";
@@ -28,6 +30,8 @@ function App() {
           <Route path="/:name/details" element={<Details />} />
           <Route path="/mycollection" element={<Collection />} />
           <Route path="/quiz" element={<Quiz />} />
+          <Route path="/easyquiz" element={<EasyQuiz />} />
+          <Route path="/advancedquiz" element={<HardQuiz />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/wishlist" element={<Wishlist />} />
