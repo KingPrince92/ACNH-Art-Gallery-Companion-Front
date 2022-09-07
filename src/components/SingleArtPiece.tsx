@@ -1,8 +1,6 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
-import CollectionContext from "../context/CollectionContext";
-import WishlistContext from "../context/WishlistContext";
 import SingleArt from "../models/SingleArt";
 import "./SingleArtPiece.css";
 
@@ -12,9 +10,9 @@ interface Props {
 
 const SingleArtPiece = ({ art }: Props) => {
   const { addCollection, removeCollection, isCollection } =
-    useContext(CollectionContext);
+    useContext(AuthContext);
   const { addWishlist, removeWishlist, isWishlist } =
-    useContext(WishlistContext);
+    useContext(AuthContext);
   const { user } = useContext(AuthContext);
   const [confirmation, setConfirmation] = useState(false);
   const [shown, setShown] = useState(true);
