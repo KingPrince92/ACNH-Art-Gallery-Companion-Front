@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import WishlistContext from "../context/WishlistContext";
+import AuthContext from "../context/AuthContext";
 import SingleArtPiece from "./SingleArtPiece";
 import "./Wishlist.css";
 
 const Wishlist = () => {
-  const { wishlist } = useContext(WishlistContext);
+  const { wishlist } = useContext(AuthContext);
   const wishlistLogo = require("../assets/PresentNH.png");
   return (
     <div className="Wishlist">
