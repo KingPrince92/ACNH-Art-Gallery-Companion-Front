@@ -35,10 +35,10 @@ const HardQuiz = () => {
     {
       text: "The Common Painting was known for depicting the lives of whom?",
       options: [
-        { id: 0, text: "Farmers", isCorrect: false },
-        { id: 1, text: "Women", isCorrect: false },
+        { id: 0, text: "Pilgrims", isCorrect: false },
+        { id: 1, text: "Women and Children", isCorrect: false },
         { id: 2, text: "Commoners", isCorrect: true },
-        { id: 3, text: "Men", isCorrect: false },
+        { id: 3, text: "A Barnyard", isCorrect: false },
       ],
     },
     {
@@ -64,7 +64,7 @@ const HardQuiz = () => {
     {
       text: "How long did Michelangelo take to sculpt the Gallant Statue?",
       options: [
-        { id: 0, text: "3 year", isCorrect: true },
+        { id: 0, text: "3 years", isCorrect: true },
         { id: 1, text: "7 years", isCorrect: false },
         { id: 2, text: "15 weeks", isCorrect: false },
         { id: 3, text: "9 days", isCorrect: false },
@@ -109,10 +109,10 @@ const HardQuiz = () => {
     {
       text: "What is Wistful Painting also known as?",
       options: [
-        { id: 0, text: "Girl with a Pearl Earring", isCorrect: false },
+        { id: 0, text: "Girl with a Pearl Earring", isCorrect: true },
         { id: 1, text: "Girl with a Blue Turban", isCorrect: false },
         { id: 2, text: "Girl with the Blue Eyes", isCorrect: false },
-        { id: 3, text: "Girl with a Turban", isCorrect: true },
+        { id: 3, text: "Girl with a Turban", isCorrect: false },
       ],
     },
 
@@ -129,10 +129,10 @@ const HardQuiz = () => {
     {
       text: "What was the artist of the Scenic Painting also known as?",
       options: [
-        { id: 0, text: "The Elder", isCorrect: false },
-        { id: 1, text: "Peasant Artist", isCorrect: true },
-        { id: 2, text: "Pieter Brueghel", isCorrect: false },
-        { id: 3, text: "Pieter Brueghel the Elder", isCorrect: false },
+        { id: 0, text: "Peter Burger the Old", isCorrect: false },
+        { id: 1, text: "Patrick Burner the Ancient", isCorrect: false },
+        { id: 2, text: "Phillip Bailey the Senior", isCorrect: false },
+        { id: 3, text: "Pieter Brueghel the Elder", isCorrect: true },
       ],
     },
 
@@ -147,7 +147,7 @@ const HardQuiz = () => {
     },
 
     {
-      text: "The Sinking Painting is of the tragic figure of which Shakespearan plays?",
+      text: "The Sinking Painting is of a tragic figure from which Shakespearan play?",
       options: [
         { id: 0, text: "Hamlet", isCorrect: true },
         { id: 1, text: "Macbeth", isCorrect: false },
@@ -157,7 +157,7 @@ const HardQuiz = () => {
     },
 
     {
-      text: "What major revolution was going on when the Worth Painting was painted?",
+      text: "What major revolution was going on when the Worthy Painting was painted?",
       options: [
         { id: 0, text: "The American Revolutionary War", isCorrect: false },
         { id: 1, text: "The French Revolution", isCorrect: true },
