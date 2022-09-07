@@ -33,7 +33,7 @@ const EasyQuiz = () => {
       ],
     },
     {
-      text: "Which art piece has an unknown author to this day?",
+      text: "Which of these art pieces has an unknown author to this day?",
       options: [
         { id: 0, text: "Basic Painting", isCorrect: false },
         { id: 1, text: "Familiar Statue", isCorrect: false },
@@ -86,7 +86,7 @@ const EasyQuiz = () => {
     },
 
     {
-      text: "The Famous Painting is known as:",
+      text: "The Famous Painting's true title is known as:",
       options: [
         { id: 0, text: "Mona Lisa", isCorrect: true },
         { id: 1, text: "Lona Misa", isCorrect: false },
@@ -108,16 +108,16 @@ const EasyQuiz = () => {
           text: "The painting does not have a forgery.",
           isCorrect: true,
         },
-        { id: 3, text: "The stems are green.", isCorrect: false },
+        { id: 3, text: "The stems are colored bright blue", isCorrect: false },
       ],
     },
     {
       text: "Twinkling Painting is famously known as what?",
       options: [
-        { id: 0, text: "The Stars of the Night", isCorrect: false },
+        { id: 0, text: "The Stars of the Village at Night", isCorrect: false },
         { id: 1, text: "The Starry Night", isCorrect: true },
-        { id: 2, text: "The Night is Starry", isCorrect: false },
-        { id: 3, text: "You gotta know this.", isCorrect: false },
+        { id: 2, text: "The Swirling Stars", isCorrect: false },
+        { id: 3, text: "A Star Over Paris", isCorrect: false },
       ],
     },
     {
@@ -147,7 +147,6 @@ const EasyQuiz = () => {
     setCurrentQuestion(0);
     setShowResults(false);
   };
-
 
   return (
     <div className="EasyQuiz">
