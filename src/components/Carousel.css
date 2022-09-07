@@ -71,3 +71,10 @@
     display: none;
   }
 }
+
+@media only screen and (min-width: 481px) and (max-width: 900px) {
+  .Carousel .carousel-container {
+    width: 70%;
+    height: auto;
+  }
+}
