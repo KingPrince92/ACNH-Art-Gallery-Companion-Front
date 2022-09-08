@@ -1,16 +1,28 @@
-.AboutUs .meetus {
-  text-align: center;
-  padding: 15px;
+.AboutUs .aboutUsImage {
+  display: block;
+  height: 200px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .AboutUs .Simon {
   margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 5px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.158);
+  border-radius: 20px;
 }
 .AboutUs .Andrew {
   margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.158);
+  border-radius: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -33,6 +45,12 @@
 }
 .AboutUs .Milo {
   margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.158);
+  border-radius: 20px;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -69,4 +87,25 @@
 
 .AboutUs .penguin {
   color: red;
+}
+
+.AboutUs .social-links {
+  color: #396d37d2;
+}
+.AboutUs .social-links:hover {
+  color: goldenrod;
+}
+
+.AboutUs .ThankYou {
+  background-color: white;
+  text-align: center;
+  opacity: 0.7;
+  width: 50%;
+  border-radius: 20px;
+  padding: 10px;
+  height: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
