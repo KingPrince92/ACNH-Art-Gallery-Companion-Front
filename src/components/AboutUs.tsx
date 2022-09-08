@@ -3,11 +3,12 @@ import "./AboutUs.css";
 const simonProfileimg = require("../assets/AcnhSimon.png");
 const andrewProfileimg = require("../assets/AcnhAndrew.png");
 const miloProfileimg = require("../assets/AcnhMilo.png");
+const aboutUsImg = require("../assets/AboutUs.png");
 
 const AboutUs = () => {
   return (
     <div className="AboutUs">
-      <h1 className="meetus">Meet Us</h1>
+      <img src={aboutUsImg} className="aboutUsImage" alt="About Us" />
 
       <div className="Simon">
         <div className="fixsimon">
@@ -24,11 +25,15 @@ const AboutUs = () => {
           learned so much in the past 3 months, and I’ve loved every minute of
           it. This project was a fantastic finish to the bootcamp because I
           couldn’t have asked for a better group. I now feel like someone who
-          can better contribute to society. Thank you again, Mitch Cuckovich and
-          James Devine.
+          can better contribute to society. <br></br>
           <span className="penguin">
             Penguin Brothers Forever <i className="fa-solid fa-kiwi-bird"></i>
           </span>
+          <p className="social-links">
+            <a href="https://www.linkedin.com/in/simon-orow/">
+              <i className="fa-brands fa-linkedin social-links"></i>
+            </a>
+          </p>
         </p>
       </div>
 
@@ -43,9 +48,15 @@ const AboutUs = () => {
           to build something gave me the fulfillment I’ve been looking for. I am
           looking to leverage the tech skills I’ve gained from my coding
           bootcamp, in order to create intuitive and user friendly clean code.
+          <br></br>
           <span className="penguin">
             Penguin Brothers Forever <i className="fa-solid fa-kiwi-bird"></i>
           </span>
+          <p className="social-links">
+            <a href="https://www.linkedin.com/in/andrew-nadratowski/">
+              <i className="fa-brands fa-linkedin social-links"></i>
+            </a>
+          </p>
         </p>
         <div className="fixname">
           <h3>Andrew Nadratowski</h3>
@@ -72,10 +83,22 @@ const AboutUs = () => {
           Grand Circus bootcamp learning how to code, and is very thankful that
           Simon and Andrew agreed to spend the last two weeks of their class on
           an Animal Crossing themed project even though they never really played
-          before.{" "}
+          before. <br></br>
           <span className="penguin">
             Penguin Brothers Forever <i className="fa-solid fa-kiwi-bird"></i>
           </span>
+          <p className="social-links">
+            <a href="https://www.linkedin.com/in/milo-prince/">
+              <i className="fa-brands fa-linkedin social-links"></i>
+            </a>
+          </p>
+        </p>
+      </div>
+      <div className="ThankYou">
+        <p>
+          Lastly, thank you to the Grand Circus team, and a special shout out to
+          Mitch Cuckovich and James Devine for all of their help and support!{" "}
+          <i className="fa-solid fa-heart"></i>
         </p>
       </div>
     </div>
