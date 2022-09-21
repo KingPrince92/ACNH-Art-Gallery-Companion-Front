@@ -18,15 +18,36 @@ const Header = () => {
             <i className="fa-solid fa-bars"></i>
             <i className="fa-solid fa-caret-down"></i>
           </button>
-          <div className="dropdown-content">
-            <a href="/">Home</a>
+          <ul className="dropdown-content">
+            <Link to="/">
+              <li>Home</li>
+            </Link>
+            <Link to="/gallery">
+              <li>Gallery</li>
+            </Link>
+            <Link to="/mycollection">
+              <li>Your Collection</li>
+            </Link>
+            <Link to="/wishlist">
+              <li>Your Wishlist</li>
+            </Link>
+            <Link to="/quiz">
+              <li>Quiz</li>
+            </Link>
+            <Link to="/leaderboard">
+              <li>Leaderboard</li>
+            </Link>
+            <Link to="/aboutus">
+              <li>About Us</li>
+            </Link>
+            {/* <a href="/">Home</a>
             <a href="/gallery">Gallery</a>
             <a href="/mycollection">My Collection</a>
             <a href="/wishlist">My Wishlist</a>
             <a href="/quiz">Quiz</a>
             <a href="/leaderboard">Leaderboards</a>
-            <a href="/aboutus">About Us</a>
-          </div>
+            <a href="/aboutus">About Us</a> */}
+          </ul>
         </div>
         <h1 className="Welcome">Welcome to the Museum!</h1>
         {user ? (

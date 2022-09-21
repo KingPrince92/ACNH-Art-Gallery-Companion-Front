@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+ACNH Art Gallery Companion app created as a Final Project in Grand Circus' Full Stack Front End Bootcamp.
+
+This app is intended to be used by players of Animal Crossing: New Horizons for the Nintendo Switch as a means to catalog and keep track of art pieces needed or obtained in-game; as well as a means of entertainment with art history based quizzes.
+
+The Nookipedia API https://api.nookipedia.com/ was utilized to provide Art Piece information, and project is hosted on Firebase.
+Back end database composed with MongoDB.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -44,5 +49,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
 # ACNH-Art-Gallery-Companion-Front
+
 # ACNH-Art-Gallery-Companion-Front

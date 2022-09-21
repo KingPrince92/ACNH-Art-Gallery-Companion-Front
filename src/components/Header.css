@@ -54,7 +54,7 @@
   border-bottom: 3px groove #a6a286;
   box-sizing: border-box;
 }
-.navbar {
+.Header .navbar {
   overflow: hidden;
   background-color: #333;
   font-family: Arial;
@@ -62,7 +62,7 @@
 }
 
 /* Links inside the navbar */
-.navbar a {
+.Header .navbar a {
   float: left;
   font-size: 16px;
   color: black;
@@ -72,14 +72,14 @@
 }
 
 /* The dropdown container */
-.dropdown {
+.Header .dropdown {
   float: right;
   overflow: hidden;
   margin-right: 25px;
 }
 
 /* Dropdown button */
-.dropdown .dropbtn {
+.Header .dropdown .dropbtn {
   font-size: 25px;
   border: none;
   outline: none;
@@ -91,7 +91,7 @@
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover,
+.Header.navbar a:hover,
 .dropdown:hover .dropbtn {
   background-color: rgba(226, 207, 182, 0.308);
   outline: 1px solid black;
@@ -99,13 +99,14 @@
 }
 
 /* Dropdown content (hidden by default) */
-.dropdown-content {
+.Header .dropdown-content {
   display: none;
   position: absolute;
   background-color: tan;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  list-style: none;
 }
 
 /* Links inside the dropdown */
