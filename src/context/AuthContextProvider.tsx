@@ -32,7 +32,6 @@ function AuthContextProvider({ children }: { children: ReactNode }) {
               collections: [],
               wishlist: [],
             };
-
             addUserProfile(newPerson);
             setUser(newPerson);
             setCollection(newPerson.collections);
